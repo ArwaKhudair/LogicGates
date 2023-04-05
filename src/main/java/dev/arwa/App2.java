@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 // This is a program that performs logical operations
 // and prints the result truth table in the console
+
 public class App2 {
     final static String AND = "^";
     final static String OR = "v";
@@ -40,16 +41,17 @@ public class App2 {
         // false, false, false));
     }
 
+
     public static List<String> getVariables(String expression) {
         List<String> variables = new ArrayList<>();
         for (int i = 0; i < expression.length(); i++) {
             if (expression.charAt(i) == 'P' || expression.charAt(i) == 'Q' || expression.charAt(i) == 'R'
                     || expression.charAt(i) == 'S') {
                 variables.add("" + expression.charAt(i));
-            }
-        }
+            }   
+        }   
         return variables;
-    }
+    }   
 
     public boolean getValue(String complex, List<String> variables, List<Boolean> values) {
         String operand = "" + complex.charAt(0);
@@ -57,11 +59,11 @@ public class App2 {
             LogicalOperand logicalOperand = new LogicalOperand("" + complex.charAt(1), true);
         } else if (operand.equals(AND)) {
             LogicalOperand logicalOperand = new LogicalOperand("" + complex.charAt(0), false);
-        }
+        }   
         for (int i = 0; i < variables.size(); i++) {
             
-        }
-    }
+            }   
+    }   
 
     public int getOperator(String opertor) {
         switch (opertor) {
@@ -78,7 +80,7 @@ public class App2 {
             default:
                 return 0;
         }
-    }
+    }   
 
     public static String pickExpression() {
         System.out.println("Enter an expression:");
@@ -112,12 +114,14 @@ class LogicalOperand {
                 this.value = !newVal;
             } else {
                 this.value = newVal;
-            }
-        }
-    }
+            }   
+        }   
+    }   
 
     public boolean getValue() {
         return this.value;
     }
 
+
 }
+

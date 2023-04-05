@@ -98,6 +98,6 @@ public class App {
                 return "If the first operand is false, the second operand must be true and vice versa | (~a v b) ^ (a v ~b)";
             default:
                 return "Invalid operator";
-        }
-    }
-}
+        }   
+    }   
+}   
