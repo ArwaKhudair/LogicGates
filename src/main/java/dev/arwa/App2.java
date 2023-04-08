@@ -40,6 +40,7 @@ public class App2 {
         // System.out.println("F\tF\tF\tF\t" + performOperation(false, expression,
         // false, false, false));
     }
+    
 
 
     public static List<String> getVariables(String expression) {
